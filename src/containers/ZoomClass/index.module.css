@@ -1,0 +1,75 @@
+.cardContainer{
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.14);
+    background-color: #ffffff;
+    padding: 12px;
+    margin-right: 20px;
+}
+
+.className{
+    font-family: NunitoSans-Bold;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    color: #21262b;
+    padding-bottom: 8px;
+}
+
+.teacherName{
+    font-family: NunitoSans-Regular;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #595c60;
+    padding-bottom: 8px;
+}
+
+.time{
+    font-family: NunitoSans-Regular;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    padding-bottom: 8px;
+    color: #ef6200;
+}
+
+.container{
+   min-height: 100vh;
+}
+
+.heading{
+  height: 80px;
+  width: 100%;
+  background-color: #21262b;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  font-family: NunitoSans-Bold;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.content{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
