@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import 'antd/dist/antd.css';
 import { Row, Col } from 'antd';
 import { useLocation, useHistory } from 'react-router-dom';
@@ -27,7 +27,7 @@ const Login = () => {
         updateLoading(true);
         const response = await AuthenticationService.authenticate(data);
         if (!response.isError) {
-            const { from } = location.state || { from: { pathname: "/adminHome" } };
+            const { from } = location.state || { from: { pathname: "/home" } };
             history.replace(from);
         } else {
             updateErrorState(true);
@@ -35,6 +35,11 @@ const Login = () => {
         }
         updateLoading(false);
     }
+
+    useEffect(() => {
+        const zoomMeeting = document.getElementById("zmmtg-root");
+        zoomMeeting.style.position = 'unset';
+      }, [])
 
     const enableLoginButton = () => {
         return emailVerification(email) && emptyStringVerification(password) && !isLoading;
@@ -83,7 +88,7 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <div style={{ backgroundColor: '#fff' }}>
             <div className={styles.container}>
                 {isLoading && <LoadingIndicator />}
                 {renderData()}

@@ -10,6 +10,7 @@ import {
   OverlayLoading,
 } from '../../components';
 
+
 const initZoom = ({
     meetingNumber,
     signature,
@@ -49,11 +50,11 @@ const initZoom = ({
 
 const Home = (props) => {
   const {
-      meetingNumber = '71083701471',
+      meetingNumber = '6529344020',
       userEmail = 'paras.taneja.409@gmail.com',
       userName  = 'Paras Taneja',
       role = 0,
-      passWord = 'Bji5Xk',
+      passWord = 'K5krv2',
   } = props;
 
 
@@ -71,9 +72,7 @@ const Home = (props) => {
     });
   }
 
-  useEffect(() => {
-    ZoomMtg.preLoadWasm();
-    ZoomMtg.prepareJssdk();  
+  useEffect(() => {    
     getSignature();
   }, [])
 
