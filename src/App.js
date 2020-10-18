@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,14 +8,25 @@ import {
 import {
   Login,
   Home,
-  ZoomClass,
 } from './containers';
 import {
   CustomRoute,
 } from './components';
 
 
+
 const StackNavigator = () => {
+
+  useEffect(() => {
+    const script = document.createElement("script");
+
+    script.src = "http://localhost:3000/js/tool.js";
+    script.async = true;
+
+    document.body.appendChild(script);
+  });
+
+
   return (
     <Router>
       <Switch>
@@ -28,9 +39,9 @@ const StackNavigator = () => {
         <CustomRoute path="/home">
           <Home />
         </CustomRoute>
-        <CustomRoute path="/zoomClass">
+        {/* <CustomRoute path="/zoomClass">
           <ZoomClass />
-        </CustomRoute>
+        </CustomRoute> */}
       </Switch>
     </Router>
   );
